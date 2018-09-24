@@ -144,7 +144,6 @@ const makeBaddies = () => {
 // ============
 const makeBuddies = () => {
   let aside = $('<aside>Buddies</aside>');
-  //let body = $('body')
   $("body").append(aside);
     let buddyList = $('<ul>');
     for(let i = 0; i < buddies.length; i++) {
@@ -171,8 +170,6 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
     $(".hobbit").appendTo("#middle-earth #rivendell");
- 
-
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
@@ -186,7 +183,8 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
+ $($(".buddy")[3]).text("Aragorn");
+  
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
