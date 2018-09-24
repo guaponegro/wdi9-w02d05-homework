@@ -41,7 +41,13 @@ const lands = [
 // Chapter 1
 // ============
 const makeMiddleEarth = () => {
-
+  $("body").append("<section id='middle-earth'></section>");
+  for(i = 0; i < lands.length - 2; i++){
+    $("#middle-earth").append("<article id='the-shire'><h1>The Shire</h1></article>");
+    $("#middle-earth").append("<article id='rivendell'><h1>Rivenedell</h1></article>");
+    $("#middle-earth").append("<article id='mordor'><h1>Mordor</h1></article>");
+    
+  }
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
   console.log("Trying to make middle earth.");
@@ -69,6 +75,13 @@ const makeMiddleEarth = () => {
 // Chapter 2
 // ============
 const makeHobbits = () => {
+  $("#the-shire").append("<ul></ul>")
+  for(i = 0; i < hobbits.length - 3; i++){
+    $("#the-shire").append("<li class='hobbit'>Frodo Baggins</li>");
+    $("#the-shire").append("<li class='hobbit'>Samwise 'Sam' Gamgee</li>");
+    $("#the-shire").append("<li class='hobbit'>Meriadoc 'Merry' Brandybuck</li>");
+    $("#the-shire").append("<li class='hobbit'>Peregrin 'Pippin' Took</li>");
+  }
 
   console.log('Make hobbits');
 
@@ -89,6 +102,8 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
+  //document.getElementByClassName("hobbit")[0];
+  $(".hobbit").append("<div id='the-ring'></div>");
 
   // 1. create an empty div with an id of 'the-ring'
 
@@ -107,7 +122,13 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-
+  $("#mordor").append("<ul></ul>");
+  for(i = 0; i < hobbits.length - 3; i++){
+    $("#mordor").append("<li class='baddy'>Sauron</li>");
+    $("#mordor").append("<li class='baddy'>Saruman</li>");
+    $("#mordor").append("<li class='baddy'>The Uruk-hai</li>");
+    $("#mordor").append("<li class='baddy'>Orcs</li>");
+  }
   // 1. display an unordered list of baddies in Mordor
 
   // 2. give each of the baddies a class of "baddy"
@@ -122,7 +143,18 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
+  let aside = $('<aside>Buddies</aside>');
+  //let body = $('body')
+  $("body").append(aside);
+    let buddyList = $('<ul>');
+    for(let i = 0; i < buddies.length; i++) {
+      let buddy = $('<li>');
+      buddy.text(buddies[i]);
+      buddyList.append(buddy);
+      buddy.addClass('buddy')
+    }
+    // insert your aside as a child element of rivendell
+    aside.append(buddyList);
   // 1. create an aside tag and append it to middle-earth below mordor
 
   // 2. display an unordered list of buddies in the aside
