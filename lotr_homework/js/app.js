@@ -170,6 +170,8 @@ const makeBuddies = () => {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
+    $(".hobbit").appendTo("#middle-earth #rivendell");
+ 
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
