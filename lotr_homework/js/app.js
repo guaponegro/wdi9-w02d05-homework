@@ -143,7 +143,7 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-  let aside = $('<aside>Buddies</aside>');
+  let aside = $('<aside></aside>');
   $("body").append(aside);
     let buddyList = $('<ul>');
     for(let i = 0; i < buddies.length; i++) {
@@ -198,6 +198,10 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+  $("#middle-earth").append("<div id='the-fellowship'><h1>The Fellowship</h1></div>");
+  $(".buddy").appendTo("#the-fellowship");
+  $(".hobbit").appendTo("#the-fellowship");
+
 
   // 1. create a new div with an id 'the-fellowship'
 
