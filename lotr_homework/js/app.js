@@ -240,9 +240,9 @@ alert("The Horn of Gondor has been blown");
   // 1. create a pop-up alert that the horn of gondor has been blown
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+$('.buddy:contains("Boromir")').css("text-decoration", "line-through");
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+$('.baddy:contains("The Uruk-hai")').remove();
 };
 
 // COMMIT YOUR WORK
