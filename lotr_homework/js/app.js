@@ -253,6 +253,7 @@ $('.baddy:contains("The Uruk-hai")').remove();
 // ============
 const itsDangerousToGoAlone = () => {
   $("#Mordor").append($('.hobbit:contains("Frodo"), .hobbit:contains("Samwise")'));
+  $("#Mordor").append("<div/>").addClass("mount-doom");
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
@@ -268,7 +269,9 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+$("#Mordor").append('<div id="gollum"></div>');
+$("#gollum").append($('#the-ring'));
+$("#mount-doom").appendTo($('#gollum'));
   // 2. Move the ring from Frodo and give it to Gollum
 
   // 3. Move Gollum into Mount Doom
@@ -282,7 +285,9 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
-
+$("#gollum").remove();
+$("#baddies").remove();
+$(".hobbit").appendTo($('#The-Shire'));
   // 1. remove Gollum and the Ring from the DOM
 
   // 2. remove all the baddies from the DOM
