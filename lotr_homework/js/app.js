@@ -252,7 +252,7 @@ $('.baddy:contains("The Uruk-hai")').remove();
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
-
+  $("#Mordor").append($('.hobbit:contains("Frodo"), .hobbit:contains("Samwise")'));
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
